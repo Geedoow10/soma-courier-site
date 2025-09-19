@@ -1,60 +1,202 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Soma Courier Limited</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <style>
-    body { font-family: Arial, sans-serif; margin: 0; padding: 0; line-height: 1.6; color: #333; }
-    .header { background-color: #f5f5f5; padding: 40px 20px; text-align: center; }
-    .header h1 { margin: 0; font-size: 36px; }
-    .header p { font-size: 18px; }
-    .section { padding: 20px; }
-    .services { display: flex; flex-wrap: wrap; gap: 20px; }
-    .service { flex: 1 1 200px; background-color: #fafafa; padding: 20px; border-radius: 8px; box-shadow: 0 0 5px rgba(0,0,0,0.1); }
-    .contact { background-color: #f5f5f5; padding: 20px; }
-    .footer { text-align: center; padding: 10px; font-size: 14px; background-color: #eee; }
-    @media (max-width: 600px) {
-      .services { flex-direction: column; }
-    }
-  </style>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 </head>
-<body>
-  <div class="header">
-    <h1>Soma Courier Limited</h1>
-    <p>Reliable Delivery & Professional Cleaning in London</p>
-  </div>
-  <div class="section">
-    <h2>Our Services</h2>
-    <div class="services">
-      <div class="service">
-        <h3>Cleaning</h3>
-        <ul>
-          <li>Regular domestic and office cleaning</li>
-          <li>Deep cleaning and end of tenancy</li>
-          <li>Carpet, oven, and window cleaning</li>
-          <li>After-builders cleaning</li>
+<body class="min-h-screen bg-white text-gray-900">
+  <!-- Header -->
+  <header class="sticky top-0 z-40 bg-white/90 backdrop-blur border-b">
+    <div class="mx-auto max-w-6xl px-4 py-3 flex items-center justify-between">
+      <a href="#home" class="flex items-center gap-2">
+        <span class="font-bold tracking-tight">Soma Courier Limited</span>
+      </a>
+      <nav class="hidden md:flex items-center gap-6 text-sm">
+        <a class="hover:text-blue-600" href="#services">Services</a>
+        <a class="hover:text-blue-600" href="#pricing">Pricing</a>
+        <a class="hover:text-blue-600" href="#about">About</a>
+        <a class="hover:text-blue-600" href="#contact">Contact</a>
+      </nav>
+      <a href="#contact" class="md:inline-flex hidden px-4 py-2 rounded-2xl bg-blue-600 text-white font-medium shadow-sm hover:bg-blue-700">Get a quote</a>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section id="home" class="bg-gradient-to-b from-blue-50 to-white">
+    <div class="mx-auto max-w-6xl px-4 py-16 grid md:grid-cols-2 gap-8 items-center">
+      <div>
+        <h1 class="text-3xl md:text-4xl font-extrabold leading-tight">Cleaning and Delivery for London</h1>
+        <p class="mt-4 text-gray-700">You get a small, reliable team. We keep places clean and move parcels on time.</p>
+        <div class="mt-6 flex gap-3">
+          <a href="#pricing" class="px-5 py-3 rounded-2xl bg-blue-600 text-white font-medium shadow hover:bg-blue-700">View prices</a>
+          <a href="#contact" class="px-5 py-3 rounded-2xl border font-medium hover:bg-gray-50">Book now</a>
+        </div>
+        <div class="mt-6 text-sm text-gray-600">
+          Phone: <a class="text-blue-700" href="tel:+447799558037">07799558037</a> · Email: <a class="text-blue-700" href="mailto:adanawale6@gmail.com">adanawale6@gmail.com</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services -->
+  <section id="services" class="mx-auto max-w-6xl px-4 py-16">
+    <h2 class="text-2xl font-bold">Services</h2>
+    <p class="mt-2 text-gray-700">Simple, clear, on time.</p>
+    <div class="mt-8 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div class="rounded-2xl border p-5 shadow-sm hover:shadow transition">
+        <h3 class="font-semibold">Regular cleaning</h3>
+        <ul class="mt-3 space-y-1 text-sm text-gray-700 list-disc list-inside">
+          <li>Homes and offices</li>
+          <li>Weekly or bi-weekly</li>
+          <li>Checked staff</li>
         </ul>
       </div>
-      <div class="service">
-        <h3>Delivery</h3>
-        <ul>
-          <li>Same-day and next-day courier services</li>
-          <li>Small parcel and package delivery</li>
-          <li>Business-to-business logistics</li>
+      <div class="rounded-2xl border p-5 shadow-sm hover:shadow transition">
+        <h3 class="font-semibold">Deep cleaning</h3>
+        <ul class="mt-3 space-y-1 text-sm text-gray-700 list-disc list-inside">
+          <li>End of tenancy</li>
+          <li>After builders</li>
+          <li>Oven and fridge</li>
+        </ul>
+      </div>
+      <div class="rounded-2xl border p-5 shadow-sm hover:shadow transition">
+        <h3 class="font-semibold">Window and carpet</h3>
+        <ul class="mt-3 space-y-1 text-sm text-gray-700 list-disc list-inside">
+          <li>Internal windows</li>
+          <li>Spot carpet clean</li>
+          <li>Add-on pricing</li>
+        </ul>
+      </div>
+      <div class="rounded-2xl border p-5 shadow-sm hover:shadow transition">
+        <h3 class="font-semibold">Same day delivery</h3>
+        <ul class="mt-3 space-y-1 text-sm text-gray-700 list-disc list-inside">
+          <li>London wide</li>
+          <li>Small parcels</li>
+          <li>Proof of delivery</li>
+        </ul>
+      </div>
+      <div class="rounded-2xl border p-5 shadow-sm hover:shadow transition">
+        <h3 class="font-semibold">Next day delivery</h3>
+        <ul class="mt-3 space-y-1 text-sm text-gray-700 list-disc list-inside">
+          <li>Fixed routes</li>
+          <li>Business to business</li>
+          <li>Clear pricing</li>
+        </ul>
+      </div>
+      <div class="rounded-2xl border p-5 shadow-sm hover:shadow transition">
+        <h3 class="font-semibold">Pay as you go or contract</h3>
+        <ul class="mt-3 space-y-1 text-sm text-gray-700 list-disc list-inside">
+          <li>One off or regular</li>
+          <li>Tailored schedule</li>
+          <li>Invoices provided</li>
         </ul>
       </div>
     </div>
-  </div>
-  <div class="contact">
-    <h2>Contact Us</h2>
-    <p>Email: adanawale6@gmail.com</p>
-    <p>Phone: 07799558037</p>
-    <p>Company Number: 14326871</p>
-    <p>Address: 163 Cranleigh Gardens, Southall, UB1 2BY, London</p>
-  </div>
-  <div class="footer">
-    &copy; 2025 Soma Courier Limited. All rights reserved.
-  </div>
+  </section>
+
+  <!-- Pricing -->
+  <section id="pricing" class="bg-gray-50">
+    <div class="mx-auto max-w-6xl px-4 py-16">
+      <h2 class="text-2xl font-bold">Pricing</h2>
+      <p class="mt-2 text-gray-700">Transparent rates. Supplies included for cleaning.</p>
+      <div class="mt-8 overflow-x-auto rounded-2xl shadow-sm">
+        <table class="w-full text-left text-sm">
+          <thead class="bg-blue-600 text-white">
+            <tr>
+              <th class="p-3">Property size</th>
+              <th class="p-3">Fixed price</th>
+              <th class="p-3">What is included</th>
+            </tr>
+          </thead>
+          <tbody class="bg-white">
+            <tr class="border-b"><td class="p-3">Studio or 1-bed</td><td class="p-3">£150 to £180</td><td class="p-3">Kitchen, bathroom, living areas, floors</td></tr>
+            <tr class="border-b"><td class="p-3">2-bed flat</td><td class="p-3">£180 to £220</td><td class="p-3">All rooms, oven, fridge, cupboards, bathroom</td></tr>
+            <tr class="border-b"><td class="p-3">3-bed flat or house</td><td class="p-3">£220 to £280</td><td class="p-3">Full property, 2 bathrooms, appliances, windows inside</td></tr>
+            <tr class="border-b"><td class="p-3">4-bed house</td><td class="p-3">£280 to £350</td><td class="p-3">All rooms, 2–3 bathrooms, deep kitchen, internal windows</td></tr>
+            <tr><td class="p-3">Add-ons</td><td class="p-3">+£30 to £50</td><td class="p-3">Carpet steam clean, external windows, oven deep clean</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="mt-4 text-xs text-gray-600">Parking fees added if needed. Very large or heavily soiled properties quoted after a visit.</p>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about" class="mx-auto max-w-6xl px-4 py-16">
+    <h2 class="text-2xl font-bold">About</h2>
+    <p class="mt-3 max-w-3xl text-gray-700">Soma Courier Limited is a London company. We focus on quality, clear prices, and fast response. Our small team works across the city.</p>
+    <p class="mt-2 text-gray-700 text-sm">Company number: 14326871<br/>Address: 163 Cranleigh Gardens, Southall, UB1 2BY</p>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="bg-blue-50">
+    <div class="mx-auto max-w-6xl px-4 py-16">
+      <h2 class="text-2xl font-bold">Contact</h2>
+      <div class="mt-6 grid md:grid-cols-2 gap-8">
+        <div class="space-y-3 text-gray-800">
+          <p>Phone: <a class="text-blue-700" href="tel:+447799558037">07799558037</a></p>
+          <p>Email: <a class="text-blue-700" href="mailto:adanawale6@gmail.com">adanawale6@gmail.com</a></p>
+          <p>Hours: Monday to Saturday, 8:00 to 20:00</p>
+          <p class="text-sm text-gray-600">We reply fast. Same day slots are limited.</p>
+        </div>
+        <form class="bg-white p-5 rounded-2xl shadow space-y-3" action="mailto:adanawale6@gmail.com" method="post">
+          <input class="w-full border rounded-xl px-3 py-2" type="text" name="name" placeholder="Your name" required />
+          <input class="w-full border rounded-xl px-3 py-2" type="email" name="email" placeholder="Your email" required />
+          <input class="w-full border rounded-xl px-3 py-2" type="tel" name="phone" placeholder="Your phone" />
+          <textarea class="w-full border rounded-xl px-3 py-2" name="message" placeholder="Tell us what you need" rows="4" required></textarea>
+          <button type="submit" class="w-full px-4 py-2 rounded-xl bg-blue-600 text-white font-medium hover:bg-blue-700">Send</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Appointment -->
+  <section id="appointment" class="mx-auto max-w-6xl px-4 py-16">
+    <h2 class="text-2xl font-bold">Book an appointment</h2>
+    <p class="mt-2 text-gray-700">Schedule a cleaning or delivery slot. We will confirm availability by email.</p>
+    <form class="mt-6 grid md:grid-cols-2 gap-4" action="mailto:adanawale6@gmail.com" method="post">
+      <input class="w-full border rounded-xl px-3 py-2" type="text" name="name" placeholder="Your name" required />
+      <input class="w-full border rounded-xl px-3 py-2" type="email" name="email" placeholder="Your email" required />
+      <input class="w-full border rounded-xl px-3 py-2" type="tel" name="phone" placeholder="Your phone" />
+      <input class="w-full border rounded-xl px-3 py-2" type="date" name="date" placeholder="Preferred date" required />
+      <select class="w-full border rounded-xl px-3 py-2" name="service" required>
+        <option value="" disabled selected>Select service</option>
+        <option value="regular_cleaning">Regular cleaning</option>
+        <option value="deep_cleaning">Deep cleaning</option>
+        <option value="window_carpet">Window and carpet</option>
+        <option value="same_day_delivery">Same day delivery</option>
+        <option value="next_day_delivery">Next day delivery</option>
+        <option value="contract">Contract / pay as you go</option>
+      </select>
+      <textarea class="md:col-span-2 w-full border rounded-xl px-3 py-2" name="details" placeholder="Extra details (optional)" rows="4"></textarea>
+      <button type="submit" class="md:col-span-2 w-full px-4 py-2 rounded-xl bg-blue-600 text-white font-medium hover:bg-blue-700">Request appointment</button>
+    </form>
+  </section>
+
+  <!-- Payment -->
+  <section id="payment" class="bg-gray-50">
+    <div class="mx-auto max-w-6xl px-4 py-16">
+      <h2 class="text-2xl font-bold">Payment</h2>
+      <p class="mt-2 text-gray-700">We accept Visa, MasterCard, and PayPal. Use the button below to pay securely via PayPal. Payments are processed in GBP.</p>
+      <div class="mt-6">
+        <form action="https://www.paypal.com/donate" method="post" target="_blank">
+          <input type="hidden" name="business" value="adanawale1@gmail.com" />
+          <input type="hidden" name="currency_code" value="GBP" />
+          <button type="submit" class="px-6 py-3 rounded-2xl bg-blue-600 text-white font-medium shadow hover:bg-blue-700">Pay with PayPal</button>
+        </form>
+        <p class="mt-4 text-sm text-gray-600">After payment, please reference your appointment or invoice number in the PayPal notes.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="border-t">
+    <div class="mx-auto max-w-6xl px-4 py-8 text-sm text-gray-600 flex flex-col md:flex-row items-center justify-between gap-2">
+      <p>© <script>document.write(new Date().getFullYear());</script> Soma Courier Limited</p>
+      <p>Cleaning and delivery in London</p>
+    </div>
+  </footer>
 </body>
 </html>

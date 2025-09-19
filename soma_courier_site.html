@@ -152,6 +152,45 @@
     </div>
   </section>
 
+  <!-- Appointment -->
+  <section id="appointment" class="mx-auto max-w-6xl px-4 py-16">
+    <h2 class="text-2xl font-bold">Book an appointment</h2>
+    <p class="mt-2 text-gray-700">Schedule a cleaning or delivery slot. We will confirm availability by email.</p>
+    <form class="mt-6 grid md:grid-cols-2 gap-4" action="mailto:adanawale6@gmail.com" method="post">
+      <input class="w-full border rounded-xl px-3 py-2" type="text" name="name" placeholder="Your name" required />
+      <input class="w-full border rounded-xl px-3 py-2" type="email" name="email" placeholder="Your email" required />
+      <input class="w-full border rounded-xl px-3 py-2" type="tel" name="phone" placeholder="Your phone" />
+      <input class="w-full border rounded-xl px-3 py-2" type="date" name="date" placeholder="Preferred date" required />
+      <select class="w-full border rounded-xl px-3 py-2" name="service" required>
+        <option value="" disabled selected>Select service</option>
+        <option value="regular_cleaning">Regular cleaning</option>
+        <option value="deep_cleaning">Deep cleaning</option>
+        <option value="window_carpet">Window and carpet</option>
+        <option value="same_day_delivery">Same day delivery</option>
+        <option value="next_day_delivery">Next day delivery</option>
+        <option value="contract">Contract / pay as you go</option>
+      </select>
+      <textarea class="md:col-span-2 w-full border rounded-xl px-3 py-2" name="details" placeholder="Extra details (optional)" rows="4"></textarea>
+      <button type="submit" class="md:col-span-2 w-full px-4 py-2 rounded-xl bg-blue-600 text-white font-medium hover:bg-blue-700">Request appointment</button>
+    </form>
+  </section>
+
+  <!-- Payment -->
+  <section id="payment" class="bg-gray-50">
+    <div class="mx-auto max-w-6xl px-4 py-16">
+      <h2 class="text-2xl font-bold">Payment</h2>
+      <p class="mt-2 text-gray-700">We accept Visa, MasterCard, and PayPal. Use the button below to pay securely via PayPal. Payments are processed in GBP.</p>
+      <div class="mt-6">
+        <form action="https://www.paypal.com/donate" method="post" target="_blank">
+          <input type="hidden" name="business" value="adanawale1@gmail.com" />
+          <input type="hidden" name="currency_code" value="GBP" />
+          <button type="submit" class="px-6 py-3 rounded-2xl bg-blue-600 text-white font-medium shadow hover:bg-blue-700">Pay with PayPal</button>
+        </form>
+        <p class="mt-4 text-sm text-gray-600">After payment, please reference your appointment or invoice number in the PayPal notes.</p>
+      </div>
+    </div>
+  </section>
+
   <!-- Footer -->
   <footer class="border-t">
     <div class="mx-auto max-w-6xl px-4 py-8 text-sm text-gray-600 flex flex-col md:flex-row items-center justify-between gap-2">

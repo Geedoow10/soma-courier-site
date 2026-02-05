@@ -48,3 +48,6 @@ venv.bak/
 
 # Logs
 *.log
+
+# Old Soma Courier files (archived)
+old_soma_courier/

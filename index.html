@@ -1,224 +1,385 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Soma Courier Limited</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Event Hall Management - Book Your Perfect Venue</title>
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <style>
+    .gradient-bg {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    }
+    .hero-pattern {
+      background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    }
+    .card-hover {
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .card-hover:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 20px 40px rgba(102, 126, 234, 0.3);
+    }
+  </style>
 </head>
-<body class="min-h-screen bg-white text-gray-900">
+<body class="min-h-screen bg-gray-50">
   <!-- Header -->
-  <header class="sticky top-0 z-40 bg-white/90 backdrop-blur border-b">
-    <div class="mx-auto max-w-6xl px-4 py-3 flex items-center justify-between">
-      <a href="#home" class="flex items-center gap-2">
-        <span class="font-bold tracking-tight">Soma Courier Limited</span>
-      </a>
-      <nav class="hidden md:flex items-center gap-6 text-sm">
-        <a class="hover:text-blue-600" href="#services">Services</a>
-        <a class="hover:text-blue-600" href="#pricing">Pricing</a>
-        <a class="hover:text-blue-600" href="#about">About</a>
-        <a class="hover:text-blue-600" href="#contact">Contact</a>
-      </nav>
-      <a href="#contact" class="md:inline-flex hidden px-4 py-2 rounded-2xl bg-blue-600 text-white font-medium shadow-sm hover:bg-blue-700">Get a quote</a>
+  <header class="gradient-bg text-white sticky top-0 z-50 shadow-lg">
+    <div class="container mx-auto px-4 py-4">
+      <div class="flex items-center justify-between">
+        <div class="flex items-center space-x-2">
+          <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 20 20">
+            <path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z"/>
+          </svg>
+          <h1 class="text-2xl font-bold">Event Hall Management</h1>
+        </div>
+        <nav class="hidden md:flex items-center space-x-6">
+          <a href="#features" class="hover:text-purple-200 transition">Features</a>
+          <a href="#how-it-works" class="hover:text-purple-200 transition">How It Works</a>
+          <a href="#about" class="hover:text-purple-200 transition">About</a>
+          <a href="#contact" class="hover:text-purple-200 transition">Contact</a>
+        </nav>
+      </div>
     </div>
   </header>
 
-  <!-- Hero -->
-  <section id="home" class="bg-gradient-to-b from-blue-50 to-white">
-    <div class="mx-auto max-w-6xl px-4 py-16 grid md:grid-cols-2 gap-8 items-center">
-      <div>
-        <h1 class="text-3xl md:text-4xl font-extrabold leading-tight">Cleaning and Delivery for London</h1>
-        <p class="mt-4 text-gray-700">You get a small, reliable team. We keep places clean and move parcels on time.</p>
-        <div class="mt-6 flex gap-3">
-          <a href="#pricing" class="px-5 py-3 rounded-2xl bg-blue-600 text-white font-medium shadow hover:bg-blue-700">View prices</a>
-          <a href="#contact" class="px-5 py-3 rounded-2xl border font-medium hover:bg-gray-50">Book now</a>
+  <!-- Hero Section -->
+  <section class="gradient-bg hero-pattern text-white py-20 md:py-32">
+    <div class="container mx-auto px-4 text-center">
+      <h2 class="text-4xl md:text-6xl font-bold mb-6 leading-tight">
+        Book Your Perfect Event Hall
+      </h2>
+      <p class="text-xl md:text-2xl mb-8 text-purple-100 max-w-3xl mx-auto">
+        Streamline your event planning with our comprehensive hall booking management system. 
+        Reserve spaces, manage schedules, and avoid conflicts - all in one place.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+        <a href="http://127.0.0.1:5000/register" class="px-8 py-4 bg-white text-purple-700 font-bold rounded-full shadow-lg hover:shadow-xl transform hover:scale-105 transition duration-300">
+          Get Started Free
+        </a>
+        <a href="http://127.0.0.1:5000/login" class="px-8 py-4 bg-purple-600 text-white font-bold rounded-full shadow-lg hover:bg-purple-700 transition duration-300 border-2 border-white">
+          Sign In
+        </a>
+      </div>
+      <p class="mt-6 text-purple-100 text-sm">
+        🎉 No credit card required • ✨ Start booking in minutes
+      </p>
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section id="features" class="py-20 bg-white">
+    <div class="container mx-auto px-4">
+      <div class="text-center mb-16">
+        <h2 class="text-4xl font-bold text-gray-800 mb-4">Powerful Features</h2>
+        <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+          Everything you need to manage your event hall bookings efficiently
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Feature Card 1 -->
+        <div class="card-hover bg-white p-8 rounded-xl shadow-lg border-2 border-purple-100">
+          <div class="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mb-6">
+            <svg class="w-8 h-8 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+            </svg>
+          </div>
+          <h3 class="text-2xl font-bold mb-3 text-gray-800">Easy Booking</h3>
+          <p class="text-gray-600">
+            Book your event hall in just a few clicks. Simple, intuitive interface makes scheduling a breeze.
+          </p>
         </div>
-        <div class="mt-6 text-sm text-gray-600">
-          Phone: <a class="text-blue-700" href="tel:+447799558037">07799558037</a> · Email: <a class="text-blue-700" href="mailto:adanawale6@gmail.com">adanawale6@gmail.com</a>
+
+        <!-- Feature Card 2 -->
+        <div class="card-hover bg-white p-8 rounded-xl shadow-lg border-2 border-purple-100">
+          <div class="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mb-6">
+            <svg class="w-8 h-8 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/>
+            </svg>
+          </div>
+          <h3 class="text-2xl font-bold mb-3 text-gray-800">Secure & Private</h3>
+          <p class="text-gray-600">
+            Your data is protected with industry-standard encryption. Each user has their own secure account.
+          </p>
+        </div>
+
+        <!-- Feature Card 3 -->
+        <div class="card-hover bg-white p-8 rounded-xl shadow-lg border-2 border-purple-100">
+          <div class="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mb-6">
+            <svg class="w-8 h-8 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+            </svg>
+          </div>
+          <h3 class="text-2xl font-bold mb-3 text-gray-800">Conflict Prevention</h3>
+          <p class="text-gray-600">
+            Real-time availability checking prevents double bookings. No more scheduling conflicts!
+          </p>
+        </div>
+
+        <!-- Feature Card 4 -->
+        <div class="card-hover bg-white p-8 rounded-xl shadow-lg border-2 border-purple-100">
+          <div class="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mb-6">
+            <svg class="w-8 h-8 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"/>
+            </svg>
+          </div>
+          <h3 class="text-2xl font-bold mb-3 text-gray-800">Edit Anytime</h3>
+          <p class="text-gray-600">
+            Modify or cancel your bookings with ease. Full control over your reservations.
+          </p>
+        </div>
+
+        <!-- Feature Card 5 -->
+        <div class="card-hover bg-white p-8 rounded-xl shadow-lg border-2 border-purple-100">
+          <div class="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mb-6">
+            <svg class="w-8 h-8 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/>
+            </svg>
+          </div>
+          <h3 class="text-2xl font-bold mb-3 text-gray-800">Dashboard View</h3>
+          <p class="text-gray-600">
+            See all your upcoming bookings at a glance. Stay organized with a clean, visual dashboard.
+          </p>
+        </div>
+
+        <!-- Feature Card 6 -->
+        <div class="card-hover bg-white p-8 rounded-xl shadow-lg border-2 border-purple-100">
+          <div class="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mb-6">
+            <svg class="w-8 h-8 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+            </svg>
+          </div>
+          <h3 class="text-2xl font-bold mb-3 text-gray-800">24/7 Access</h3>
+          <p class="text-gray-600">
+            Book your halls anytime, anywhere. The system is always available when you need it.
+          </p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Services -->
-  <section id="services" class="mx-auto max-w-6xl px-4 py-16">
-    <h2 class="text-2xl font-bold">Services</h2>
-    <p class="mt-2 text-gray-700">Simple, clear, on time.</p>
-    <div class="mt-8 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-      <div class="rounded-2xl border p-5 shadow-sm hover:shadow transition">
-        <h3 class="font-semibold">Regular cleaning</h3>
-        <ul class="mt-3 space-y-1 text-sm text-gray-700 list-disc list-inside">
-          <li>Homes and offices</li>
-          <li>Weekly or bi-weekly</li>
-          <li>Checked staff</li>
-        </ul>
+  <!-- How It Works Section -->
+  <section id="how-it-works" class="py-20 bg-gradient-to-br from-purple-50 to-blue-50">
+    <div class="container mx-auto px-4">
+      <div class="text-center mb-16">
+        <h2 class="text-4xl font-bold text-gray-800 mb-4">How It Works</h2>
+        <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+          Get started with Event Hall Management in three simple steps
+        </p>
       </div>
-      <div class="rounded-2xl border p-5 shadow-sm hover:shadow transition">
-        <h3 class="font-semibold">Deep cleaning</h3>
-        <ul class="mt-3 space-y-1 text-sm text-gray-700 list-disc list-inside">
-          <li>End of tenancy</li>
-          <li>After builders</li>
-          <li>Oven and fridge</li>
-        </ul>
-      </div>
-      <div class="rounded-2xl border p-5 shadow-sm hover:shadow transition">
-        <h3 class="font-semibold">Window and carpet</h3>
-        <ul class="mt-3 space-y-1 text-sm text-gray-700 list-disc list-inside">
-          <li>Internal windows</li>
-          <li>Spot carpet clean</li>
-          <li>Add-on pricing</li>
-        </ul>
-      </div>
-      <div class="rounded-2xl border p-5 shadow-sm hover:shadow transition">
-        <h3 class="font-semibold">Same day delivery</h3>
-        <ul class="mt-3 space-y-1 text-sm text-gray-700 list-disc list-inside">
-          <li>London wide</li>
-          <li>Small parcels</li>
-          <li>Proof of delivery</li>
-        </ul>
-      </div>
-      <div class="rounded-2xl border p-5 shadow-sm hover:shadow transition">
-        <h3 class="font-semibold">Next day delivery</h3>
-        <ul class="mt-3 space-y-1 text-sm text-gray-700 list-disc list-inside">
-          <li>Fixed routes</li>
-          <li>Business to business</li>
-          <li>Clear pricing</li>
-        </ul>
-      </div>
-      <div class="rounded-2xl border p-5 shadow-sm hover:shadow transition">
-        <h3 class="font-semibold">Pay as you go or contract</h3>
-        <ul class="mt-3 space-y-1 text-sm text-gray-700 list-disc list-inside">
-          <li>One off or regular</li>
-          <li>Tailored schedule</li>
-          <li>Invoices provided</li>
-        </ul>
-      </div>
-    </div>
-  </section>
 
-  <!-- Pricing -->
-  <section id="pricing" class="bg-gray-50">
-    <div class="mx-auto max-w-6xl px-4 py-16">
-      <h2 class="text-2xl font-bold">Pricing</h2>
-      <p class="mt-2 text-gray-700">Transparent rates. Supplies included for cleaning.</p>
-      <div class="mt-8 overflow-x-auto rounded-2xl shadow-sm">
-        <table class="w-full text-left text-sm">
-          <thead class="bg-blue-600 text-white">
-            <tr>
-              <th class="p-3">Property size</th>
-              <th class="p-3">Fixed price</th>
-              <th class="p-3">What is included</th>
-            </tr>
-          </thead>
-          <tbody class="bg-white">
-            <tr class="border-b"><td class="p-3">Studio or 1-bed</td><td class="p-3">£150 to £180</td><td class="p-3">Kitchen, bathroom, living areas, floors</td></tr>
-            <tr class="border-b"><td class="p-3">2-bed flat</td><td class="p-3">£180 to £220</td><td class="p-3">All rooms, oven, fridge, cupboards, bathroom</td></tr>
-            <tr class="border-b"><td class="p-3">3-bed flat or house</td><td class="p-3">£220 to £280</td><td class="p-3">Full property, 2 bathrooms, appliances, windows inside</td></tr>
-            <tr class="border-b"><td class="p-3">4-bed house</td><td class="p-3">£280 to £350</td><td class="p-3">All rooms, 2–3 bathrooms, deep kitchen, internal windows</td></tr>
-            <tr><td class="p-3">Add-ons</td><td class="p-3">+£30 to £50</td><td class="p-3">Carpet steam clean, external windows, oven deep clean</td></tr>
-          </tbody>
-        </table>
-      </div>
-      <p class="mt-4 text-xs text-gray-600">Parking fees added if needed. Very large or heavily soiled properties quoted after a visit.</p>
-    </div>
-  </section>
-
-  <!-- About -->
-  <section id="about" class="mx-auto max-w-6xl px-4 py-16">
-    <h2 class="text-2xl font-bold">About</h2>
-    <p class="mt-3 max-w-3xl text-gray-700">Soma Courier Limited is a London company. We focus on quality, clear prices, and fast response. Our small team works across the city.</p>
-    <p class="mt-2 text-gray-700 text-sm">Company number: 14326871<br/>Address: 163 Cranleigh Gardens, Southall, UB1 2BY</p>
-  </section>
-
-  <!-- Contact -->
-  <section id="contact" class="bg-blue-50">
-    <div class="mx-auto max-w-6xl px-4 py-16">
-      <h2 class="text-2xl font-bold">Contact</h2>
-      <div class="mt-6 grid md:grid-cols-2 gap-8">
-        <div class="space-y-3 text-gray-800">
-          <p>Phone: <a class="text-blue-700" href="tel:+447799558037">07799558037</a></p>
-          <p>Email: <a class="text-blue-700" href="mailto:adanawale6@gmail.com">adanawale6@gmail.com</a></p>
-          <p>Hours: Monday to Saturday, 8:00 to 20:00</p>
-          <p class="text-sm text-gray-600">We reply fast. Same day slots are limited.</p>
-        </div>
-        <form class="bg-white p-5 rounded-2xl shadow space-y-3" action="https://formsubmit.co/adanawale6@gmail.com" method="POST">
-          <input class="w-full border rounded-xl px-3 py-2" type="text" name="name" placeholder="Your name" required />
-          <input class="w-full border rounded-xl px-3 py-2" type="email" name="email" placeholder="Your email" required />
-          <input class="w-full border rounded-xl px-3 py-2" type="tel" name="phone" placeholder="Your phone" />
-          <textarea class="w-full border rounded-xl px-3 py-2" name="message" placeholder="Tell us what you need" rows="4" required></textarea>
-          <button type="submit" class="w-full px-4 py-2 rounded-xl bg-blue-600 text-white font-medium hover:bg-blue-700">Send</button>
-        </form>
-      </div>
-    </div>
-  </section>
-
-  <!-- Appointment -->
-  <section id="appointment" class="mx-auto max-w-6xl px-4 py-16">
-    <h2 class="text-2xl font-bold">Book an appointment</h2>
-    <p class="mt-2 text-gray-700">Schedule a cleaning or delivery slot. We will confirm availability by email.</p>
-    <form class="mt-6 grid md:grid-cols-2 gap-4" action="https://formsubmit.co/adanawale6@gmail.com" method="POST">
-      <input class="w-full border rounded-xl px-3 py-2" type="text" name="name" placeholder="Your name" required />
-      <input class="w-full border rounded-xl px-3 py-2" type="email" name="email" placeholder="Your email" required />
-      <input class="w-full border rounded-xl px-3 py-2" type="tel" name="phone" placeholder="Your phone" />
-      <input class="w-full border rounded-xl px-3 py-2" type="date" name="date" placeholder="Preferred date" required />
-      <select class="w-full border rounded-xl px-3 py-2" name="service" required>
-        <option value="" disabled selected>Select service</option>
-        <option value="regular_cleaning">Regular cleaning</option>
-        <option value="deep_cleaning">Deep cleaning</option>
-        <option value="window_carpet">Window and carpet</option>
-        <option value="same_day_delivery">Same day delivery</option>
-        <option value="next_day_delivery">Next day delivery</option>
-        <option value="contract">Contract / pay as you go</option>
-      </select>
-      <textarea class="md:col-span-2 w-full border rounded-xl px-3 py-2" name="details" placeholder="Extra details (optional)" rows="4"></textarea>
-      <button type="submit" class="md:col-span-2 w-full px-4 py-2 rounded-xl bg-blue-600 text-white font-medium hover:bg-blue-700">Request appointment</button>
-    </form>
-  </section>
-
-  <!-- Payment -->
-  
-  <!-- Gallery -->
-  <section id="gallery" class="bg-white">
-    <div class="mx-auto max-w-6xl px-4 py-16">
-      <h2 class="text-2xl font-bold text-center mb-8">Gallery</h2>
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <div class="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+        <!-- Step 1 -->
         <div class="text-center">
-          <img src="cleaning.png" alt="Professional house cleaning" class="w-full h-64 object-cover rounded-xl shadow" />
-          <p class="mt-2 text-gray-700">Professional house cleaning</p>
+          <div class="w-20 h-20 bg-purple-600 text-white rounded-full flex items-center justify-center text-3xl font-bold mx-auto mb-6 shadow-lg">
+            1
+          </div>
+          <h3 class="text-2xl font-bold mb-4 text-gray-800">Create Account</h3>
+          <p class="text-gray-600">
+            Sign up for free in seconds. No credit card required, just your email and a password.
+          </p>
         </div>
+
+        <!-- Step 2 -->
         <div class="text-center">
-          <img src="carpet.png" alt="Deep carpet cleaning" class="w-full h-64 object-cover rounded-xl shadow" />
-          <p class="mt-2 text-gray-700">Deep carpet cleaning</p>
+          <div class="w-20 h-20 bg-purple-600 text-white rounded-full flex items-center justify-center text-3xl font-bold mx-auto mb-6 shadow-lg">
+            2
+          </div>
+          <h3 class="text-2xl font-bold mb-4 text-gray-800">Book Your Hall</h3>
+          <p class="text-gray-600">
+            Choose your preferred hall, select date and time, add details, and confirm your booking instantly.
+          </p>
         </div>
+
+        <!-- Step 3 -->
         <div class="text-center">
-          <img src="delivery.png" alt="Reliable courier delivery" class="w-full h-64 object-cover rounded-xl shadow" />
-          <p class="mt-2 text-gray-700">Reliable courier delivery</p>
+          <div class="w-20 h-20 bg-purple-600 text-white rounded-full flex items-center justify-center text-3xl font-bold mx-auto mb-6 shadow-lg">
+            3
+          </div>
+          <h3 class="text-2xl font-bold mb-4 text-gray-800">Manage & Enjoy</h3>
+          <p class="text-gray-600">
+            View, edit, or cancel bookings from your dashboard. Focus on planning your perfect event!
+          </p>
+        </div>
+      </div>
+
+      <div class="text-center mt-12">
+        <a href="http://127.0.0.1:5000/register" class="inline-block px-8 py-4 bg-purple-600 text-white font-bold rounded-full shadow-lg hover:bg-purple-700 transform hover:scale-105 transition duration-300">
+          Start Booking Now →
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="py-20 bg-white">
+    <div class="container mx-auto px-4">
+      <div class="max-w-4xl mx-auto">
+        <div class="text-center mb-12">
+          <h2 class="text-4xl font-bold text-gray-800 mb-4">About Event Hall Management</h2>
+          <div class="w-24 h-1 bg-purple-600 mx-auto mb-8"></div>
+        </div>
+
+        <div class="prose prose-lg max-w-none text-gray-600 space-y-6">
+          <p class="text-xl leading-relaxed">
+            Event Hall Management is a comprehensive booking system designed to simplify the process of 
+            reserving event spaces. Whether you're planning a conference, wedding, birthday party, or 
+            corporate meeting, our platform makes it easy to find and book the perfect venue.
+          </p>
+
+          <div class="grid md:grid-cols-2 gap-8 my-12">
+            <div class="bg-purple-50 p-6 rounded-lg">
+              <h3 class="text-2xl font-bold text-purple-700 mb-3">Our Mission</h3>
+              <p>
+                To provide a seamless, efficient booking experience that saves time and eliminates 
+                the hassle of managing event hall reservations.
+              </p>
+            </div>
+            <div class="bg-purple-50 p-6 rounded-lg">
+              <h3 class="text-2xl font-bold text-purple-700 mb-3">Our Vision</h3>
+              <p>
+                To become the leading platform for event space management, empowering organizations 
+                and individuals to host memorable events with ease.
+              </p>
+            </div>
+          </div>
+
+          <div class="bg-gradient-to-r from-purple-100 to-blue-100 p-8 rounded-xl">
+            <h3 class="text-2xl font-bold text-gray-800 mb-4">Why Choose Us?</h3>
+            <ul class="space-y-3">
+              <li class="flex items-start">
+                <svg class="w-6 h-6 text-purple-600 mr-3 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                </svg>
+                <span><strong>User-Friendly:</strong> Intuitive interface designed for everyone, no technical expertise required</span>
+              </li>
+              <li class="flex items-start">
+                <svg class="w-6 h-6 text-purple-600 mr-3 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                </svg>
+                <span><strong>Reliable:</strong> Built with modern technology to ensure stability and performance</span>
+              </li>
+              <li class="flex items-start">
+                <svg class="w-6 h-6 text-purple-600 mr-3 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                </svg>
+                <span><strong>Secure:</strong> Your data is protected with industry-standard security measures</span>
+              </li>
+              <li class="flex items-start">
+                <svg class="w-6 h-6 text-purple-600 mr-3 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                </svg>
+                <span><strong>Free to Start:</strong> No upfront costs, start managing your bookings immediately</span>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
-  <section id="payment" class="bg-gray-50">
-    <div class="mx-auto max-w-6xl px-4 py-16">
-      <h2 class="text-2xl font-bold">Payment</h2>
-      <p class="mt-2 text-gray-700">We accept Visa, MasterCard, and PayPal. Use the button below to pay securely via PayPal. Payments are processed in GBP.</p>
-      <div class="mt-6">
-        <form action="https://www.paypal.com/donate" method="post" target="_blank">
-          <input type="hidden" name="business" value="adanawale1@gmail.com" />
-          <input type="hidden" name="currency_code" value="GBP" />
-          <button type="submit" class="px-6 py-3 rounded-2xl bg-blue-600 text-white font-medium shadow hover:bg-blue-700">Pay with PayPal</button>
-        </form>
-        <p class="mt-4 text-sm text-gray-600">After payment, please reference your appointment or invoice number in the PayPal notes.</p>
+  <!-- CTA Section -->
+  <section class="gradient-bg hero-pattern text-white py-20">
+    <div class="container mx-auto px-4 text-center">
+      <h2 class="text-4xl md:text-5xl font-bold mb-6">
+        Ready to Simplify Your Hall Bookings?
+      </h2>
+      <p class="text-xl md:text-2xl mb-8 text-purple-100 max-w-3xl mx-auto">
+        Join hundreds of users who have streamlined their event planning with our platform.
+      </p>
+      <a href="http://127.0.0.1:5000/register" class="inline-block px-10 py-5 bg-white text-purple-700 font-bold text-lg rounded-full shadow-xl hover:shadow-2xl transform hover:scale-105 transition duration-300">
+        Get Started Free Today
+      </a>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="py-20 bg-gray-100">
+    <div class="container mx-auto px-4">
+      <div class="max-w-3xl mx-auto text-center">
+        <h2 class="text-4xl font-bold text-gray-800 mb-6">Get In Touch</h2>
+        <p class="text-xl text-gray-600 mb-8">
+          Have questions? We're here to help you get the most out of Event Hall Management.
+        </p>
+        
+        <div class="bg-white p-8 rounded-xl shadow-lg">
+          <div class="space-y-6">
+            <div class="flex items-center justify-center space-x-4">
+              <svg class="w-6 h-6 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+              </svg>
+              <a href="mailto:support@eventhall.com" class="text-lg text-purple-600 hover:text-purple-700">support@eventhall.com</a>
+            </div>
+            
+            <div class="flex items-center justify-center space-x-4">
+              <svg class="w-6 h-6 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+              </svg>
+              <span class="text-lg text-gray-700">Check our <a href="#" class="text-purple-600 hover:text-purple-700">FAQ</a> for quick answers</span>
+            </div>
+
+            <div class="pt-6 border-t border-gray-200">
+              <p class="text-gray-600">
+                For technical documentation and guides, visit our 
+                <a href="#" class="text-purple-600 hover:text-purple-700 font-semibold">Documentation</a>
+              </p>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </section>
 
   <!-- Footer -->
-  <footer class="border-t">
-    <div class="mx-auto max-w-6xl px-4 py-8 text-sm text-gray-600 flex flex-col md:flex-row items-center justify-between gap-2">
-      <p>© <script>document.write(new Date().getFullYear());</script> Soma Courier Limited</p>
-      <p>Cleaning and delivery in London</p>
+  <footer class="bg-gray-900 text-white py-12">
+    <div class="container mx-auto px-4">
+      <div class="grid md:grid-cols-3 gap-8 mb-8">
+        <div>
+          <h3 class="text-xl font-bold mb-4">Event Hall Management</h3>
+          <p class="text-gray-400">
+            Simplifying event space bookings with modern technology and user-friendly design.
+          </p>
+        </div>
+        <div>
+          <h3 class="text-xl font-bold mb-4">Quick Links</h3>
+          <ul class="space-y-2">
+            <li><a href="#features" class="text-gray-400 hover:text-white transition">Features</a></li>
+            <li><a href="#how-it-works" class="text-gray-400 hover:text-white transition">How It Works</a></li>
+            <li><a href="#about" class="text-gray-400 hover:text-white transition">About</a></li>
+            <li><a href="http://127.0.0.1:5000/login" class="text-gray-400 hover:text-white transition">Sign In</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="text-xl font-bold mb-4">Resources</h3>
+          <ul class="space-y-2">
+            <li><a href="#" class="text-gray-400 hover:text-white transition">Documentation</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-white transition">Support</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-white transition">Privacy Policy</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-white transition">Terms of Service</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="border-t border-gray-800 pt-8 text-center text-gray-400">
+        <p>&copy; 2026 Event Hall Management. All rights reserved.</p>
+        <p class="mt-2">Built with ❤️ for seamless event planning</p>
+      </div>
     </div>
   </footer>
+
+  <script>
+    // Smooth scrolling for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+          });
+        }
+      });
+    });
+  </script>
 </body>
 </html>

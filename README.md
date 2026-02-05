@@ -1,77 +1,65 @@
-# Soma Courier Limited - Website & Event Hall Management System
+# Event Hall Management System
 
-Welcome to the Soma Courier Limited repository! This project contains both the company website and an event hall booking management system.
+Welcome to the Event Hall Management System! This comprehensive platform makes booking and managing event halls simple, efficient, and conflict-free.
 
 ## 🌐 Live Website
 
-**Domain:** [somacourier.com](http://somacourier.com)
+**Landing Page:** `index.html` - Modern promotional website for the Event Hall Management System  
+**Application:** `event_hall_app.py` - Flask-based booking management application
 
-## 📦 Repository Contents
+## 📦 What's Included
 
-This repository includes two main components:
+This repository contains a complete event hall booking solution:
 
-### 1. Soma Courier Limited Website
-A professional business website for cleaning and delivery services in London.
-
-**Main File:** `index.html` (also available as `soma_courier_site.html`)
+### 1. Landing Page (index.html)
+A beautiful, modern website that introduces the Event Hall Management System.
 
 **Features:**
-- 🏠 Modern, responsive design
-- 📱 Mobile-friendly layout using Tailwind CSS
-- 🎨 Clean, professional interface
-- 📞 Contact information and booking forms
-- 💼 Service descriptions and pricing
-- 🖼️ Gallery with service images
-- 💳 PayPal payment integration
+- 🎨 Purple gradient theme matching the application
+- 📱 Fully responsive design using Tailwind CSS
+- ✨ Smooth animations and hover effects
+- 📋 Features showcase
+- 📖 How it works section
+- 💼 About and contact information
+- 🚀 Direct links to the booking application
 
-**Services Offered:**
-- Regular cleaning (homes and offices)
-- Deep cleaning (end of tenancy, after builders)
-- Window and carpet cleaning
-- Same day delivery (London wide)
-- Next day delivery (business to business)
-- Pay as you go or contract options
-
-### 2. Event Hall Management System
+### 2. Event Hall Management Application (event_hall_app.py)
 A Flask-based web application for managing event hall bookings.
-
-**Main File:** `event_hall_app.py`
 
 **Features:**
 - 👤 User registration and authentication
 - 📅 Create, edit, and delete hall bookings
 - ⚠️ Real-time conflict detection (prevents double bookings)
 - 📊 Personal dashboard showing upcoming appointments
-- 🎨 Modern purple gradient design theme
+- 🎨 Modern purple gradient design theme (#667eea → #764ba2)
 - 🔒 Secure password hashing and session management
+- 📱 Responsive HTML5 datetime pickers
 
 **Documentation:**
-- **[README_EVENT_HALL.md](README_EVENT_HALL.md)** - Setup and usage guide
-- **[FEATURES_OVERVIEW.md](FEATURES_OVERVIEW.md)** - Detailed feature documentation
-- **[CODE_SNIPPETS.md](CODE_SNIPPETS.md)** - Key implementation examples
+- **[README_EVENT_HALL.md](README_EVENT_HALL.md)** - Detailed setup and usage guide
+- **[FEATURES_OVERVIEW.md](FEATURES_OVERVIEW.md)** - Complete feature documentation
+- **[CODE_SNIPPETS.md](CODE_SNIPPETS.md)** - Implementation examples and code reference
 - **[PREVIEW.md](PREVIEW.md)** - Visual preview with ASCII mockups
-- **[PURPLE_THEME.md](PURPLE_THEME.md)** - Complete design theme guide
+- **[PURPLE_THEME.md](PURPLE_THEME.md)** - Design theme guide and color palette
 
 ## 🚀 Quick Start
 
-### Viewing the Soma Courier Website
+### Viewing the Landing Page
 
-The website is ready to deploy and can be viewed by:
+The landing page is a static HTML file that can be opened directly:
 
-1. **Local Preview:**
-   ```bash
-   # Open index.html in your browser
-   open index.html
-   # or on Linux
-   xdg-open index.html
-   ```
+```bash
+# Open in browser
+open index.html
+# or on Linux
+xdg-open index.html
+# or on Windows
+start index.html
+```
 
-2. **Static Hosting:**
-   - Deploy to GitHub Pages, Netlify, or Vercel
-   - The site uses CDN resources (Tailwind CSS)
-   - No build process required
+For deployment, simply upload `index.html` to any static hosting service (GitHub Pages, Netlify, Vercel, etc.).
 
-### Running the Event Hall Management System
+### Running the Event Hall Application
 
 1. **Install dependencies:**
    ```bash
@@ -83,7 +71,7 @@ The website is ready to deploy and can be viewed by:
    python event_hall_app.py
    ```
 
-3. **Access the app:**
+3. **Access the application:**
    - Open `http://127.0.0.1:5000` in your browser
    - Register a new account
    - Start creating hall bookings!
@@ -91,200 +79,169 @@ The website is ready to deploy and can be viewed by:
 ## 📂 Project Structure
 
 ```
-soma-courier-site/
-├── index.html                 # Main Soma Courier website
-├── soma_courier_site.html     # Copy of main website
-├── CNAME                      # Custom domain configuration
+event-hall-management/
+├── index.html                 # Landing page (new Event Hall website)
+├── event_hall_app.py          # Flask booking application
 │
-├── event_hall_app.py          # Event hall booking system
-├── README_EVENT_HALL.md       # Event hall documentation
-├── FEATURES_OVERVIEW.md       # Feature details
+├── README.md                  # This file
+├── README_EVENT_HALL.md       # Application setup guide
+├── FEATURES_OVERVIEW.md       # Feature documentation
 ├── CODE_SNIPPETS.md           # Code examples
-├── PREVIEW.md                 # Visual preview
+├── PREVIEW.md                 # Visual mockups
 ├── PURPLE_THEME.md            # Design theme guide
 │
-├── carpet.png                 # Gallery image
-├── cleaning.png               # Gallery image
-├── delivery.png               # Gallery image
-│
-└── .gitignore                 # Git ignore rules
+├── .gitignore                 # Git ignore rules
+└── old_soma_courier/          # Archived files (ignored by git)
 ```
 
 ## 🎨 Design & Branding
 
-### Soma Courier Website
-- **Color Scheme:** Blue (#3b82f6) and white
-- **Typography:** System fonts for clean, modern look
-- **Framework:** Tailwind CSS 2.2.19
-- **Layout:** Responsive grid with mobile-first approach
+### Purple Gradient Theme
 
-### Event Hall App
-- **Color Scheme:** Purple gradient (#667eea to #764ba2)
-- **Typography:** Apple, Segoe UI, Roboto system fonts
-- **Framework:** Custom CSS with embedded templates
-- **Layout:** Card-based design with modern aesthetics
+The entire system uses a cohesive purple gradient design:
 
-## 💻 Technologies Used
+- **Primary Gradient:** `linear-gradient(135deg, #667eea 0%, #764ba2 100%)`
+- **Primary Color:** `#667eea` (Soft Purple)
+- **Accent Color:** `#764ba2` (Deep Purple)
+- **Hover State:** `#5568d3` (Darker Purple)
 
-### Website
+**Where it's used:**
+- Landing page header and hero sections
+- Application login/register pages
+- Dashboard headers
+- Primary buttons and links
+- Focus states on inputs
+
+### Typography & Framework
+
+- **Frontend Framework:** Tailwind CSS (CDN)
+- **Font Family:** System fonts (Apple, Segoe UI, Roboto)
+- **Responsive Design:** Mobile-first approach
+- **Icons:** SVG icons for performance
+
+## 💻 Technology Stack
+
+### Landing Page
 - HTML5
-- CSS3 (via Tailwind CSS)
-- JavaScript (inline)
-- FormSubmit.co for contact forms
-- PayPal integration for payments
+- CSS3 (Tailwind CSS)
+- Vanilla JavaScript (smooth scrolling)
+- SVG graphics
 
-### Event Hall App
+### Flask Application
 - **Backend:** Python 3.x, Flask
 - **Database:** SQLite with SQLAlchemy ORM
 - **Authentication:** Flask-Login
 - **Security:** Werkzeug password hashing
 - **Frontend:** Embedded HTML templates with CSS
 
-## 📧 Contact Information
+## 🔐 Security Features
 
-**Company:** Soma Courier Limited  
-**Phone:** [07799558037](tel:+447799558037)  
-**Email:** [adanawale6@gmail.com](mailto:adanawale6@gmail.com)  
-**Address:** 163 Cranleigh Gardens, Southall, UB1 2BY  
-**Company Number:** 14326871
+- **Password Hashing:** Werkzeug PBKDF2 encryption
+- **SQL Injection Protection:** SQLAlchemy ORM
+- **XSS Protection:** Template escaping
+- **Session Management:** Flask-Login secure sessions
+- **User Isolation:** Users can only manage their own bookings
 
-**Hours:** Monday to Saturday, 8:00 to 20:00
+**Important:** Change the `SECRET_KEY` in `event_hall_app.py` before production deployment.
 
 ## 🚢 Deployment
 
-### GitHub Pages (Website)
+### Landing Page Deployment
 
-The Soma Courier website is configured for GitHub Pages with a custom domain:
+The landing page is ready to deploy to any static hosting:
 
-1. Repository is already configured with `CNAME` file
-2. GitHub Pages serves `index.html` automatically
-3. Custom domain: somacourier.com
+**GitHub Pages:**
+1. Push to GitHub
+2. Enable GitHub Pages in repository settings
+3. Select main branch
+4. Site will be live at `https://yourusername.github.io/repo-name/`
 
-### Event Hall App Deployment
+**Netlify/Vercel:**
+1. Connect repository
+2. Deploy automatically
 
-For production deployment of the event hall app:
+**Note:** Update the Flask app URLs in `index.html` to point to your deployed application URL instead of `http://127.0.0.1:5000`.
 
-1. **Update Configuration:**
-   - Change `SECRET_KEY` to a secure random value
-   - Use environment variables for sensitive data
-   - Switch from SQLite to PostgreSQL/MySQL
-   - Disable debug mode
+### Flask Application Deployment
 
-2. **Hosting Options:**
-   - Heroku
-   - PythonAnywhere
-   - DigitalOcean
-   - AWS/GCP/Azure
+For production deployment of the booking system:
 
-3. **Production Checklist:**
-   - ✅ Set secure SECRET_KEY
-   - ✅ Use production database
-   - ✅ Enable HTTPS
-   - ✅ Set DEBUG = False
-   - ✅ Configure proper logging
-   - ✅ Set up backup strategy
-
-## 📚 Documentation Links
-
-### Main Website
-- See `index.html` source code for implementation details
-- Contact forms use [FormSubmit.co](https://formsubmit.co/)
-- Payment integration via [PayPal](https://www.paypal.com/)
-
-### Event Hall System
-- **[README_EVENT_HALL.md](README_EVENT_HALL.md)** - Complete setup guide
-- **[FEATURES_OVERVIEW.md](FEATURES_OVERVIEW.md)** - All features explained
-- **[PREVIEW.md](PREVIEW.md)** - Visual mockups and design
-- **[PURPLE_THEME.md](PURPLE_THEME.md)** - Color system and theming
-- **[CODE_SNIPPETS.md](CODE_SNIPPETS.md)** - Implementation reference
-
-## 🛠️ Development
-
-### Local Development
-
-**Website:**
+**Heroku:**
 ```bash
-# No build required - just open index.html
-# Or serve with Python
-python -m http.server 8000
-# Visit http://localhost:8000
+# Create Procfile
+echo "web: python event_hall_app.py" > Procfile
+
+# Create requirements.txt
+pip freeze > requirements.txt
+
+# Deploy
+heroku create your-app-name
+git push heroku main
 ```
 
-**Event Hall App:**
-```bash
-# Install dependencies
-pip install flask flask_sqlalchemy flask_login
+**PythonAnywhere, DigitalOcean, AWS, GCP:**
+- See [README_EVENT_HALL.md](README_EVENT_HALL.md) for detailed deployment instructions
 
-# Run in debug mode
-python event_hall_app.py
+**Production Checklist:**
+- ✅ Change SECRET_KEY to secure random value
+- ✅ Use environment variables for configuration
+- ✅ Upgrade from SQLite to PostgreSQL/MySQL
+- ✅ Enable HTTPS
+- ✅ Set DEBUG = False
+- ✅ Configure proper logging
+- ✅ Set up database backups
 
-# Visit http://127.0.0.1:5000
-```
+## 📚 Documentation
 
-### Testing
+### Complete Documentation Suite
 
-**Website:**
-- Test all navigation links
-- Verify contact form submission
-- Check PayPal payment flow
-- Test on different devices/browsers
+1. **[README_EVENT_HALL.md](README_EVENT_HALL.md)** - Application installation and usage
+2. **[FEATURES_OVERVIEW.md](FEATURES_OVERVIEW.md)** - All features explained in detail
+3. **[PREVIEW.md](PREVIEW.md)** - Visual mockups and design previews
+4. **[PURPLE_THEME.md](PURPLE_THEME.md)** - Complete color system and theming guide
+5. **[CODE_SNIPPETS.md](CODE_SNIPPETS.md)** - Code examples and implementation details
 
-**Event Hall App:**
-- Test user registration and login
-- Create test bookings
-- Verify conflict detection
-- Check edit and delete operations
+## 🎯 Use Cases
 
-## 🔐 Security Notes
-
-### Website
-- Contact forms handled by FormSubmit.co (third-party service)
-- PayPal handles payment processing securely
-- No sensitive data stored client-side
-
-### Event Hall App
-- Passwords hashed using Werkzeug PBKDF2
-- SQL injection protection via SQLAlchemy ORM
-- XSS protection through template escaping
-- Session management with Flask-Login
-- **Important:** Change SECRET_KEY before production deployment
+Perfect for:
+- 🏢 **Corporate Events** - Meeting rooms, conference halls, training spaces
+- 🎊 **Social Events** - Birthday parties, weddings, celebrations
+- 🎓 **Educational** - Classrooms, lecture halls, seminar rooms
+- 🏛️ **Community Centers** - Public halls, activity rooms
+- 🎭 **Entertainment Venues** - Performance spaces, studios
+- 🏋️ **Fitness Centers** - Studio rooms, activity halls
 
 ## 🤝 Contributing
 
-This is a commercial project for Soma Courier Limited. For inquiries or contributions, please contact the company directly.
+This project is set up for easy customization:
+
+1. **Customize the landing page** - Edit `index.html` to match your branding
+2. **Extend the Flask app** - Add features in `event_hall_app.py`
+3. **Update theme** - Modify colors in `PURPLE_THEME.md` for reference
+4. **Add documentation** - Help others understand your changes
 
 ## 📄 License
 
-© 2024 Soma Courier Limited. All rights reserved.
+© 2026 Event Hall Management System. Open source project for event management.
 
-This project contains proprietary business information for Soma Courier Limited, a registered company in the UK (Company Number: 14326871).
+## 🎉 Getting Started
 
-## 🎉 Project Status
+Ready to streamline your hall bookings?
 
-**Status:** ✅ **READY FOR PRODUCTION**
+1. **Try the landing page:** Open `index.html` in your browser
+2. **Run the application:** `python event_hall_app.py`
+3. **Create an account:** Register at `http://127.0.0.1:5000/register`
+4. **Make your first booking:** Click "Create New Booking" from the dashboard
 
-Both the Soma Courier website and Event Hall Management System are fully functional and ready for deployment.
+## 📧 Support
 
-### Website ✅
-- [x] Complete design and layout
-- [x] All sections implemented
-- [x] Contact forms functional
-- [x] Payment integration working
-- [x] Responsive design
-- [x] Domain configured (somacourier.com)
-
-### Event Hall App ✅
-- [x] User authentication complete
-- [x] Booking CRUD operations
-- [x] Conflict detection working
-- [x] Dashboard implemented
-- [x] Modern UI with purple theme
-- [x] Comprehensive documentation
-- [x] Security features in place
+For questions, issues, or feature requests:
+- Check the [documentation files](README_EVENT_HALL.md)
+- Review the [code examples](CODE_SNIPPETS.md)
+- See the [visual previews](PREVIEW.md)
 
 ---
 
-**Last Updated:** February 2026  
-**Maintained by:** Soma Courier Limited
+**Built with ❤️ for seamless event planning**
 
-For questions or support, please contact: [adanawale6@gmail.com](mailto:adanawale6@gmail.com)
+Last Updated: February 2026

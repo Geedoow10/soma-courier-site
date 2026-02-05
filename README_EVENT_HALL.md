@@ -2,6 +2,14 @@
 
 A web-based event hall booking system built with Flask that allows users to register, log in, and manage their hall reservations.
 
+## 📸 Preview & Design
+
+Want to see what the app looks like? Check out our visual documentation:
+- **[PREVIEW.md](PREVIEW.md)** - Detailed visual preview with ASCII mockups of all pages
+- **[PURPLE_THEME.md](PURPLE_THEME.md)** - Complete guide to the purplish gradient design theme
+
+The application features a modern **purple gradient** design (#667eea to #764ba2) that creates a professional and elegant user experience.
+
 ## Features
 
 ### Core Functionality

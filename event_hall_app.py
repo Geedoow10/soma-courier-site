@@ -4,17 +4,12 @@ Simple Event Hall Management System using Flask, SQLAlchemy, and Flask‑Login.
 This script defines a minimal web application that allows users to register,
 log in, log out and manage their own hall booking appointments. Each user
 can create, edit and delete appointments. A dashboard shows upcoming
-appointments for the logged‑in user. The code is intentionally compact to
-serve as a starting point for building a more comprehensive system. To run
-this application in your own environment, install Flask and its extensions
-with `pip install flask flask_sqlalchemy flask_login` and execute this file.
+appointments for the logged‑in user.
 
-Note: This code cannot be executed in the current environment because
-external package installation is blocked. It is provided for instructional
-purposes and should be run locally.
-
+For deployment instructions, see DEPLOYMENT.md
 """
 
+import os
 from datetime import datetime
 from flask import Flask, render_template_string, redirect, url_for, request
 from flask_sqlalchemy import SQLAlchemy
@@ -23,9 +18,15 @@ from werkzeug.security import generate_password_hash, check_password_hash
 
 
 app = Flask(__name__)
-app.config['SECRET_KEY'] = 'change_me_to_a_secret_value'
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///event_hall.db'
+
+# Production-ready configuration
+app.config['SECRET_KEY'] = os.environ.get('SECRET_KEY', 'change_me_to_a_secret_value')
+app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get('DATABASE_URL', 'sqlite:///event_hall.db')
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
+
+# Fix for Heroku postgres:// vs postgresql:// issue
+if app.config['SQLALCHEMY_DATABASE_URI'].startswith('postgres://'):
+    app.config['SQLALCHEMY_DATABASE_URI'] = app.config['SQLALCHEMY_DATABASE_URI'].replace('postgres://', 'postgresql://', 1)
 
 db = SQLAlchemy(app)
 login_manager = LoginManager(app)
@@ -487,5 +488,11 @@ def delete_appointment(appointment_id: int):
 
 
 if __name__ == '__main__':
-    # The application is intended for demonstration and should be run locally.
-    app.run(debug=True)
+    # Create database tables if they don't exist
+    with app.app_context():
+        db.create_all()
+    
+    # Production-ready server configuration
+    port = int(os.environ.get('PORT', 5000))
+    debug = os.environ.get('FLASK_DEBUG', 'False').lower() == 'true'
+    app.run(host='0.0.0.0', port=port, debug=debug)

@@ -4,8 +4,12 @@ Welcome to the Event Hall Management System! This comprehensive platform makes b
 
 ## 🌐 Live Website
 
-**Landing Page:** `index.html` - Modern promotional website for the Event Hall Management System  
-**Application:** `event_hall_app.py` - Flask-based booking management application
+**Status:** ✅ **Ready for Production Deployment**
+
+**Landing Page:** Available on GitHub Pages after deployment  
+**Application:** Flask-based booking system (requires separate deployment)
+
+👉 **[See DEPLOYMENT.md for complete deployment instructions](DEPLOYMENT.md)**
 
 ## 📦 What's Included
 
@@ -44,10 +48,9 @@ A Flask-based web application for managing event hall bookings.
 
 ## 🚀 Quick Start
 
-### Viewing the Landing Page
+### Option 1: Local Development
 
-The landing page is a static HTML file that can be opened directly:
-
+**Landing Page:**
 ```bash
 # Open in browser
 open index.html
@@ -57,33 +60,40 @@ xdg-open index.html
 start index.html
 ```
 
-For deployment, simply upload `index.html` to any static hosting service (GitHub Pages, Netlify, Vercel, etc.).
+**Flask Application:**
+```bash
+# Install dependencies
+pip install -r requirements.txt
 
-### Running the Event Hall Application
+# Run the application
+python event_hall_app.py
 
-1. **Install dependencies:**
-   ```bash
-   pip install flask flask_sqlalchemy flask_login
-   ```
+# Visit http://127.0.0.1:5000
+```
 
-2. **Run the application:**
-   ```bash
-   python event_hall_app.py
-   ```
+### Option 2: Deploy to Production
 
-3. **Access the application:**
-   - Open `http://127.0.0.1:5000` in your browser
-   - Register a new account
-   - Start creating hall bookings!
+**📚 Complete deployment guide:** See **[DEPLOYMENT.md](DEPLOYMENT.md)**
+
+**Quick Summary:**
+1. Deploy landing page to GitHub Pages (automatic with this repo)
+2. Deploy Flask app to Heroku, PythonAnywhere, or Render
+3. Update `APP_CONFIG` in `index.html` with your Flask app URL
+4. Push changes and you're live!
 
 ## 📂 Project Structure
 
 ```
 event-hall-management/
-├── index.html                 # Landing page (new Event Hall website)
-├── event_hall_app.py          # Flask booking application
+├── index.html                 # Landing page with dynamic URL config
+├── event_hall_app.py          # Flask booking application (production-ready)
+│
+├── Procfile                   # Heroku deployment configuration
+├── requirements.txt           # Python dependencies
+├── runtime.txt                # Python version specification
 │
 ├── README.md                  # This file
+├── DEPLOYMENT.md              # 🚀 Complete deployment guide
 ├── README_EVENT_HALL.md       # Application setup guide
 ├── FEATURES_OVERVIEW.md       # Feature documentation
 ├── CODE_SNIPPETS.md           # Code examples
@@ -142,54 +152,56 @@ The entire system uses a cohesive purple gradient design:
 - **Session Management:** Flask-Login secure sessions
 - **User Isolation:** Users can only manage their own bookings
 
-**Important:** Change the `SECRET_KEY` in `event_hall_app.py` before production deployment.
+**Note:** The app now automatically handles environment variables for production deployment. See [DEPLOYMENT.md](DEPLOYMENT.md) for complete instructions.
 
 ## 🚢 Deployment
 
-### Landing Page Deployment
+### ⚡ Quick Deploy
 
-The landing page is ready to deploy to any static hosting:
+The system is now **production-ready** with all deployment files included!
 
-**GitHub Pages:**
-1. Push to GitHub
-2. Enable GitHub Pages in repository settings
-3. Select main branch
-4. Site will be live at `https://yourusername.github.io/repo-name/`
+**🎯 See [DEPLOYMENT.md](DEPLOYMENT.md) for the complete step-by-step guide.**
 
-**Netlify/Vercel:**
-1. Connect repository
-2. Deploy automatically
+### Landing Page (GitHub Pages)
 
-**Note:** Update the Flask app URLs in `index.html` to point to your deployed application URL instead of `http://127.0.0.1:5000`.
+Already configured! Just enable GitHub Pages in repository settings:
+1. Go to Settings → Pages
+2. Select branch: `copilot/create-event-hall-management-system`
+3. Click Save
+4. Site will be live at `https://geedoow10.github.io/soma-courier-site/`
 
-### Flask Application Deployment
+### Flask Application (Heroku/PythonAnywhere/Render)
 
-For production deployment of the booking system:
+**Files included for deployment:**
+- ✅ `Procfile` - Heroku configuration
+- ✅ `requirements.txt` - Python dependencies
+- ✅ `runtime.txt` - Python version
+- ✅ Production-ready `event_hall_app.py` with environment variables
 
-**Heroku:**
+**One-command Heroku deploy:**
 ```bash
-# Create Procfile
-echo "web: python event_hall_app.py" > Procfile
-
-# Create requirements.txt
-pip freeze > requirements.txt
-
-# Deploy
-heroku create your-app-name
-git push heroku main
+heroku create your-event-hall-app
+heroku config:set SECRET_KEY="your-secret-key-here"
+git push heroku copilot/create-event-hall-management-system:main
 ```
 
-**PythonAnywhere, DigitalOcean, AWS, GCP:**
-- See [README_EVENT_HALL.md](README_EVENT_HALL.md) for detailed deployment instructions
+**After deployment:**
+- Update `APP_CONFIG.flaskAppUrl` in `index.html`
+- Set `APP_CONFIG.isAppDeployed = true`
+- Push changes to update landing page
 
-**Production Checklist:**
-- ✅ Change SECRET_KEY to secure random value
-- ✅ Use environment variables for configuration
-- ✅ Upgrade from SQLite to PostgreSQL/MySQL
-- ✅ Enable HTTPS
-- ✅ Set DEBUG = False
-- ✅ Configure proper logging
-- ✅ Set up database backups
+### Production Checklist
+
+**Landing Page:**
+- ✅ GitHub Pages enabled
+- ✅ `APP_CONFIG` updated with Flask URL
+- ✅ `isAppDeployed` set to `true`
+
+**Flask Application:**
+- ✅ `SECRET_KEY` environment variable set
+- ✅ `DATABASE_URL` configured (for PostgreSQL)
+- ✅ HTTPS enabled (automatic on most platforms)
+- ✅ Debug mode disabled (automatic via env vars)
 
 ## 📚 Documentation
 
@@ -228,20 +240,36 @@ This project is set up for easy customization:
 
 Ready to streamline your hall bookings?
 
-1. **Try the landing page:** Open `index.html` in your browser
-2. **Run the application:** `python event_hall_app.py`
-3. **Create an account:** Register at `http://127.0.0.1:5000/register`
-4. **Make your first booking:** Click "Create New Booking" from the dashboard
+1. **Deploy landing page:** Enable GitHub Pages (see [DEPLOYMENT.md](DEPLOYMENT.md))
+2. **Deploy Flask app:** Follow Heroku quick-start guide
+3. **Connect the two:** Update APP_CONFIG in index.html
+4. **Go live!** Your Event Hall Management System is ready!
+
+## 🎉 Production Status
+
+**✅ READY TO PUBLISH**
+
+This system is production-ready with:
+- ✅ Modern, responsive landing page
+- ✅ Full-featured booking application
+- ✅ Deployment files and configuration
+- ✅ Comprehensive documentation
+- ✅ Security best practices
+- ✅ Environment variable support
+
+**📚 Complete deployment guide:** [DEPLOYMENT.md](DEPLOYMENT.md)
 
 ## 📧 Support
 
 For questions, issues, or feature requests:
-- Check the [documentation files](README_EVENT_HALL.md)
-- Review the [code examples](CODE_SNIPPETS.md)
-- See the [visual previews](PREVIEW.md)
+- Check the [deployment guide](DEPLOYMENT.md)
+- Review the [documentation files](README_EVENT_HALL.md)
+- See the [code examples](CODE_SNIPPETS.md)
+- View the [visual previews](PREVIEW.md)
 
 ---
 
 **Built with ❤️ for seamless event planning**
 
-Last Updated: February 2026
+**Status:** ✅ Production-Ready | 🚀 Ready to Deploy  
+**Last Updated:** February 2026
